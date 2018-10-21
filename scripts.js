@@ -8,7 +8,7 @@ request.open('GET', 'https://ghibliapi.herokuapp.com/films', true);
 request.onload = () => {
   let data = JSON.parse(this.response);
   data.forEach(data => console.log(data.title));
-}
+};
 
 // Send request
-request.send()
+request.send();
