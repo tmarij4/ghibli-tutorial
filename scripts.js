@@ -12,3 +12,14 @@ request.onload = () => {
 
 // Send request
 request.send();
+
+//Create new html elements
+const app = document.getElementId('root');
+const logo = document.createElement('img');
+logo.src = 'logo.png';
+const container = document.createElement('div');
+container.setAttribute('class', 'container');
+
+//Add elements to website
+app.appendChild(logo);
+app.appendChild(container);
