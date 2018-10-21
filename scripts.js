@@ -1,3 +1,14 @@
+//Create new html elements
+const app = document.getElementId('root');
+const logo = document.createElement('img');
+logo.src = 'logo.png';
+const container = document.createElement('div');
+container.setAttribute('class', 'container');
+
+//Add elements to website
+app.appendChild(logo);
+app.appendChild(container);
+
 // Create a request variable and assign a new XMLHttpRequest object to it.
 let request = new XMLHttpRequest();
 
@@ -6,7 +17,7 @@ request.open('GET', 'https://ghibliapi.herokuapp.com/films', true);
 
 request.onload = () => {
   let data = JSON.parse(this.response);
-  data.forEach(data => {
+  data.forEach(movie => {
     const card = document.createElement('div');
     card.setAttribute('class', 'card');
     
@@ -30,14 +41,3 @@ request.onload = () => {
 
 // Send request
 request.send();
-
-//Create new html elements
-const app = document.getElementId('root');
-const logo = document.createElement('img');
-logo.src = 'logo.png';
-const container = document.createElement('div');
-container.setAttribute('class', 'container');
-
-//Add elements to website
-app.appendChild(logo);
-app.appendChild(container);
