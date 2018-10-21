@@ -1,5 +1,4 @@
 // Create a request variable and assign a new XMLHttpRequest object to it.
-let XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 let request = new XMLHttpRequest();
 
 // Open a new connection, using the GET request on the URL endpoint
